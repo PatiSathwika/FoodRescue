@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "foodrescue-89bba",
+  "private_key_id": "647f63256d248d6d7e9aa2f95ddbfecc5151b3a8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCwiqpQ2SfWX0b/\nxkZd+Mw0dGML69RCC4Y4PDpq+PW+AoScEjkknrhGOkZ/OKaA6cWtedGJUp25r+sT\nbKdM7Trj6M7MJxplejZFqeuQ2EJftLDBo8rWCL159mNbZR88qBBKip4wNf6NLyht\n3TYnlQ60EpN0Cy3b1IMy4eaYb2SLMdpjqwhoj0YMY5hSAdirlTD6ilEeM2K7XASs\nvKND1fonYZ5DbFSu9E2FGP7NFvwTD6FbnXM6r/z61J/xrl+DSmIH+ZBnA8Vtp4Rv\nh6k+gAMiQiExaRv5F+dEgdJFMgh0R7il1YdMccNDqxMYmXalk05n6o6U/VAGT1DF\ndUAsBdBrAgMBAAECggEAIKrYDzPPslRZD/VBihwCtWYf+dG+qiX1xSwn5ymAV5Oh\ntDuPBV61XJFmAB6ceNhJMuuKwW1fMEAEMMj3QD3Zmti2g4Js2QA/UK67n0bVKV6H\nIp3LZ8WgQhQ8mGni2NeEhDaYRPWIz9k9Eu9PGQ309Y9GZ7+10arGSEES6XwbT8Iw\nKN8qQTfu/pYbceDAKqSH1VphnF9T4W8/bt3EWtB9x1q2eQMQBV7VNILB7EK0MayH\nVBVpGYMr9y4e79lhvLV1OSkHtSAPhQ4plwhdRCsLnRsxEDK8JyGNJa41yBguNdDz\neZe9KpJ1iBnpWcA4sSo0UUqCz27mJakLdauFdZ4ZCQKBgQDUvNCNWFvYrRQhrILM\nSM3+ulxYGiS4CEnhoJYAtJn+VUc484P74awFI5fOMsqtxIlVuKLHgrERWU0BaVD7\nivzVcWAazUzD+kvCuR9ohPNFM1eTere+y/dDFNaOfbv3sTmgpshIglyfmztqDNIE\nnqsYjbfl4GmNqnS5V3au40GGpQKBgQDUcXsPq0U36TgoTtCYVhjx6P23WRxHAJrY\n+Giu6ur+VgeckAc64UbK+w8aSgZhVwRCH87CHjRMHfMmljTIpCeYT/XW1FeN2anv\nKHcQ0K3+ocjhMfU5lnjlY82PAisuoe4gjjGPNixbppca8O+xU9V0XpTx1NFzhcYs\n+nXQkaBdzwKBgFRM5g+8vdik7V9Srxool4ijbMh0w6wxjKVeL1LkPkmsnWaSCPEd\nQj9fFV7efbZSNWHEoqyQu332dy9h/ndPYlVqcfzs8ciPPMpS9YFDfeskJ0YH0RxI\nUxk//q3EYWIL1pw0uxUQo4eTyf2CSw8NmRtHvWHYhbtfmpV/dUZkQ6kJAoGAUCyH\nkdFELSaR7/xWkrcjcOBKKBC0MEOVLL8K2sCDcPrMopRkdh8glWgMOhKnt8KcM8xH\nPlEh0XwYEH7taq8w1jWPBMVcSYdUr5Io5SqsD4XFBt/QuSwFciSpJghefZnVAWpI\nX9DFCs2jByLYgqatzt4G/gEgDqX0tXLMVasvx1cCgYAue1P5v7rbiHtUteQzjniT\nBlC8CCRKFMK/odbqlMaaspmuqHKSNOO5U1Bv1IYH6WNLi1rD0Oy23sduwMMZy0bv\n3R8hC/zYnx1CNtW5kKBtNj4p/njTf1EWciWkirzwS/+sJQpJ9M0/5pJV9qsDfRUC\nt27af0s1O52m7KTBlrtbpg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@foodrescue-89bba.iam.gserviceaccount.com",
+  "client_id": "112361904602623816563",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40foodrescue-89bba.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -1,0 +1,8 @@
+
+{
+  "name": "FoodRescue - Smart Surplus Redistribution",
+  "description": "A production-ready platform to prevent food waste through early expiry prediction, smart redistribution, and gamified recognition.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
