@@ -6,11 +6,19 @@ interface GamificationSectionProps {
   points: number;
 }
 
-const GamificationSection: React.FC<GamificationSectionProps> = ({ points }) => {
-  const currentLevel =
-    LEVELS.find((l) => points >= l.min && points <= l.max) || LEVELS[0];
+/* 🔥 GAMIFICATION RULES */
+const POINTS_PER_BADGE = 15;
 
-  const nextLevel = LEVELS[LEVELS.indexOf(currentLevel) + 1];
+const GamificationSection: React.FC<GamificationSectionProps> = ({
+  points,
+}) => {
+  /* ================= LEVEL LOGIC ================= */
+  const currentLevel =
+    LEVELS.find((l) => points >= l.min && points <= l.max) ||
+    LEVELS[0];
+
+  const currentIndex = LEVELS.indexOf(currentLevel);
+  const nextLevel = LEVELS[currentIndex + 1];
 
   const progress = nextLevel
     ? ((points - currentLevel.min) /
@@ -18,11 +26,13 @@ const GamificationSection: React.FC<GamificationSectionProps> = ({ points }) => 
       100
     : 100;
 
-  const badgeCount = Math.floor(points / 10);
+  /* ================= BADGE LOGIC ================= */
+  const badgeCount = Math.floor(points / POINTS_PER_BADGE);
 
   return (
     <div className="space-y-6">
-      {/* LEVEL CARD */}
+
+      {/* ================= LEVEL CARD ================= */}
       <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-6 text-white shadow-xl">
         <div className="flex justify-between mb-4">
           <div>
@@ -39,19 +49,23 @@ const GamificationSection: React.FC<GamificationSectionProps> = ({ points }) => 
         <div className="space-y-2">
           <div className="flex justify-between text-sm text-slate-400">
             <span>{points} Points</span>
-            {nextLevel && <span>Next: {nextLevel.min}</span>}
+            {nextLevel && (
+              <span>Next: {nextLevel.min} pts</span>
+            )}
           </div>
 
-          <div className="h-3 bg-white/10 rounded-full">
+          <div className="h-3 bg-white/10 rounded-full overflow-hidden">
             <div
-              className="h-full bg-emerald-500 rounded-full"
-              style={{ width: `${progress}%` }}
+              className="h-full bg-emerald-500 rounded-full transition-all"
+              style={{
+                width: `${Math.min(progress, 100)}%`,
+              }}
             />
           </div>
         </div>
       </div>
 
-      {/* BADGES */}
+      {/* ================= BADGES ================= */}
       <div className="bg-white p-6 rounded-2xl">
         <div className="flex justify-between mb-3">
           <h5 className="font-bold flex items-center gap-2">
@@ -64,22 +78,35 @@ const GamificationSection: React.FC<GamificationSectionProps> = ({ points }) => 
         </div>
 
         <div className="grid grid-cols-4 gap-3">
-          {[...Array(8)].map((_, i) => (
-            <div
-              key={i}
-              className={`aspect-square rounded-xl flex items-center justify-center border-2 ${
-                i < badgeCount
-                  ? "bg-emerald-50 border-emerald-100 text-emerald-600"
-                  : "bg-slate-50 border-slate-100 text-slate-300 opacity-50"
-              }`}
-            >
-              <Star
-                size={20}
-                fill={i < badgeCount ? "currentColor" : "none"}
-              />
-            </div>
-          ))}
+          {[...Array(8)].map((_, i) => {
+            const unlocked = i < badgeCount;
+
+            return (
+              <div
+                key={i}
+                className={`aspect-square rounded-xl flex items-center justify-center border-2 transition ${
+                  unlocked
+                    ? "bg-emerald-50 border-emerald-200 text-emerald-600"
+                    : "bg-slate-50 border-slate-200 text-slate-300 opacity-50"
+                }`}
+              >
+                <Star
+                  size={20}
+                  fill={unlocked ? "currentColor" : "none"}
+                />
+              </div>
+            );
+          })}
         </div>
+
+        <p className="text-xs text-slate-400 mt-3 text-center">
+          Next badge in{" "}
+          <span className="font-bold text-emerald-600">
+            {POINTS_PER_BADGE -
+              (points % POINTS_PER_BADGE || POINTS_PER_BADGE)}{" "}
+            points
+          </span>
+        </p>
       </div>
     </div>
   );
