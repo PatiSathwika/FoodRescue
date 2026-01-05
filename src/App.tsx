@@ -60,16 +60,19 @@ export default function App() {
   src="/food-images/logo.jpeg"
   alt="FoodRescue"
   className="
-    w-64 h-64
-    mx-auto mb-10
+    w-24 h-24
+    md:w-32 md:h-32
+    mx-auto mb-6
     rounded-full
     object-contain
     bg-[#f5f2e8]
-    p-4
-    border-4 border-emerald-500
-    shadow-lg
+    p-2
+    border-2 border-emerald-500
+    shadow-md
   "
 />
+
+
 
 
 
